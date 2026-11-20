@@ -1,0 +1,64 @@
+# ~/.config/ghostty/config
+# Reload with Ctrl+Shift+,
+
+# ── Font ──────────────────────────────────────────────
+font-family = JetBrainsMono Nerd Font
+# or: font-family = "IosevkaTerm Nerd Font"
+# or: font-family = "MesloLGS Nerd Font"
+font-size = 13
+# font-feature = -liga          # uncomment if you hate ligatures
+
+# ── Theme ─────────────────────────────────────────────
+theme = TokyoNight
+
+# popular alternatives: TokyoNight, Gruvbox Dark, Nord, Rose Pine, Kanagawa
+
+# ── Window ────────────────────────────────────────────
+window-padding-x = 0
+window-padding-y = 0
+window-padding-balance = true
+background-opacity = 0.90
+background = #000000
+
+# background-blur-radius = 20   # only works on some compositors
+
+# ── Cursor ────────────────────────────────────────────
+cursor-style = block
+cursor-style-blink = true
+mouse-hide-while-typing = false
+
+cursor-color = #ffffff
+cursor-text = #0bb8af
+
+# ── Behavior ──────────────────────────────────────────
+confirm-close-surface = false
+window-save-state = always
+shell-integration-features = no-cursor
+
+# ── Tmux window switching ─────────────────────────────
+# Release Alt+<number> from Ghostty's own tab switching so the keys reach
+# tmux (which binds them to select-window). Ghostty tabs remain on
+# Ctrl+Tab / Ctrl+Shift+Tab / Ctrl+PageUp / Ctrl+PageDown.
+keybind = alt+digit_0=unbind
+keybind = alt+0=unbind
+keybind = alt+digit_1=unbind
+keybind = alt+1=unbind
+keybind = alt+digit_2=unbind
+keybind = alt+2=unbind
+keybind = alt+digit_3=unbind
+keybind = alt+3=unbind
+keybind = alt+digit_4=unbind
+keybind = alt+4=unbind
+keybind = alt+digit_5=unbind
+keybind = alt+5=unbind
+keybind = alt+digit_6=unbind
+keybind = alt+6=unbind
+keybind = alt+digit_7=unbind
+keybind = alt+7=unbind
+keybind = alt+digit_8=unbind
+keybind = alt+8=unbind
+keybind = alt+digit_9=unbind
+keybind = alt+9=unbind
+
+# Reload config
+keybind = ctrl+shift+comma=reload_config

@@ -1,0 +1,117 @@
+configuration {
+    modes: "window,run,ssh,drun,emoji";
+    sorting-method: "normal";
+    show-icons: true;
+    matching: "regex";
+    drun-match-fields: "name";
+    display-run: "menu:";
+    display-ssh: "ssh:";
+    display-drun: "apps:";
+    display-window: "windows:";
+}
+
+@theme "rose-pine"
+
+* {
+    font: "Jetbrains Mono Nerd Font 12";
+
+    background-color: transparent;
+    text-color: @fg0;
+
+    margin: 0px;
+    padding: 4px;
+    spacing: 0px;
+}
+
+window {
+    location: center;
+    width: 1000;
+    y-offset: -20;
+
+    border-radius: 8px;
+    border: 2px;
+    border-color: #31748f;
+
+    background-color: rgba(25, 23, 36, 0.94);
+    blur: true;
+}
+
+mainbox {
+    padding: 1px;
+    background-color: #191724;
+}
+
+inputbar {
+    background-color: rgba(31, 29, 46, 0.85);
+    border-radius: 8px;
+    border: 1px;
+    border-color: rgba(64, 61, 82, 0.7);
+
+    padding: 8px 16px;
+    spacing: 8px;
+}
+
+prompt {
+    text-color: @cyan;
+    background-color: transparent;
+}
+
+entry {
+    text-color: @fg0;
+    placeholder: "search";
+    placeholder-color: @fg2;
+    background-color: transparent;
+}
+
+listview {
+    background-color: rgba(31, 29, 46, 0.85);
+    margin: 10px 0 0;
+    columns: 1;
+    lines: 5;
+    fixed-height: false;
+    border-radius: 8px;
+}
+
+element {
+    padding: 10px 5px;
+    spacing: 6px;
+    border-radius: 8px;
+    background-color: rgba(31, 29, 46, 0.85);
+}
+
+element normal urgent {
+    text-color: @red;
+}
+
+element normal active {
+    text-color: @blue;
+}
+
+element selected normal,
+element selected active {
+    background-color: rgba(49, 116, 143, 0.22);
+    text-color: #9ccfd8;
+}
+
+element-icon {
+    size: 1em;
+    vertical-align: 0.5;
+}
+
+element-text {
+    text-color: inherit;
+    background-color: transparent;
+}
+
+message {
+    margin: 12px 0 0;
+    border-radius: 8px;
+    border: 1px;
+    border-color: rgba(64, 61, 82, 0.7);
+    background-color: rgba(31, 29, 46, 0.85);
+}
+
+textbox {
+    padding: 8px 24px;
+    background-color: rgba(31, 29, 46, 0.85);
+}

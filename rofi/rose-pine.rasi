@@ -1,0 +1,22 @@
+/**
+ * Rosé Pine Theme for Rofi (Subtle / Generic balance)
+ */
+
+* {
+    bg0: #191724;
+    bg1: #1f1d2e;
+    bg2: #26233a;
+    bg3: #403d52;
+    fg0: #e0def4;
+    fg1: #908caa;
+    fg2: #6e6a86;
+    red: #31748f;
+    green: #31748f;
+    yellow: #f6c177;
+    blue: #9ccfd8;
+    magenta: #c4a7e7;
+    cyan: #9ccfd8;
+
+    accent: #31748f;
+    urgent: #eb6f92;
+}

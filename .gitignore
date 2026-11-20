@@ -1,0 +1,16 @@
+# Ignore everything
+*
+
+# Allow directories
+!*/
+
+# Allow selected directories recursively
+!/hypr/**
+!/rofi/**
+!/waybar/**
+!/ghostty/**
+!/fontconfig/**
+!/fastfetch/**
+
+# Allow specific files
+!.gitignore
