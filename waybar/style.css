@@ -1,0 +1,200 @@
+@define-color highlight #76f1fa;
+@define-color background rgba(25, 26, 32, 0.97);
+@define-color surface rgba(12, 12, 12, 0.96);
+@define-color muted #9299a8;
+@define-color foreground #f2f5f9;
+@define-color urgent #ff777e;
+
+* {
+    font-family: "JetBrainsMono Nerd Font Propo";
+    font-size: 12px;
+    font-weight: 500;
+    min-height: 0;
+    border: none;
+    box-shadow: none;
+}
+
+window#waybar {
+    background: transparent;
+    color: @foreground;
+}
+
+/* Remove backgrounds and pills from ALL individual modules */
+#workspaces,
+#media,
+#clock,
+#submap,
+#battery,
+#bluetooth,
+#network,
+#cpu,
+#memory,
+#volume,
+#pulseaudio,
+#pulseaudio-slider,
+#tray {
+    background: transparent;
+    border: none;
+    border-radius: 0;
+    box-shadow: none;
+    margin: 0;
+    padding: 0 5px;
+    margin-bottom: 3px;
+    margin-top: 3px;
+}
+
+#submap,
+#battery,
+#bluetooth,
+#network,
+#cpu,
+#memory,
+#volume,
+#pulseaudio,
+#pulseaudio-slider,
+#tray {
+    background: transparent;
+    border: none;
+    border-radius: 0;
+    box-shadow: none;
+    margin: 0;
+    padding: 0 5px;
+    margin-bottom: 3px;
+    margin-top: 3px;
+    margin-right: 8px;
+}
+
+/* LEFT SECTION: workspaces + media */
+.modules-left {
+    background: @surface;
+    border: 1px solid rgba(255, 255, 255, 0.06);
+    border-radius: 4px;
+    margin: 3px 4px;
+    padding: 2px 6px;
+}
+
+/* CENTER SECTION: clock */
+.modules-center {
+    background: @surface;
+    border: 1px solid rgba(255, 255, 255, 0.06);
+    border-radius: 4px;
+    margin: 3px 4px;
+    padding: 2px 8px;
+}
+
+/* RIGHT SECTION: system indicators + tray */
+.modules-right {
+    background: @surface;
+    border: 1px solid rgba(255, 255, 255, 0.06);
+    border-radius: 4px;
+    margin: 3px 4px;
+    padding: 2px 6px;
+}
+
+/* Workspaces */
+#workspaces {
+    padding: 0 2px;
+}
+
+#workspaces button {
+    background: transparent;
+    color: @muted;
+    border: none;
+    border-radius: 8px;
+    padding: 0 7px;
+    margin: 0 1px;
+}
+
+#workspaces button.active {
+    /* background: @highlight; */
+    color: @highlight;
+    font-weight: 800;
+}
+
+#workspaces button.urgent,
+#submap {
+    background: @urgent;
+    color: #171a20;
+    border-radius: 7px;
+}
+
+/* Clock */
+#clock {
+    font-weight: 700;
+}
+
+/* Media */
+#media {
+    color: #42ff9f;
+}
+
+#custom-media-animation {
+    font-size: 12px;
+    margin-right: 6px;
+}
+
+#custom-media-now-playing {
+    color: @foreground;
+    margin-right: 6px;
+}
+
+#custom-media-time {
+    color: @muted;
+    font-size: 11px;
+}
+
+/* System indicators */
+#battery.charging,
+#battery.plugged {
+    color: #42ff9f;
+}
+
+#battery.warning:not(.charging) {
+    color: #ffd166;
+}
+
+#battery.critical:not(.charging),
+#network.disconnected {
+    color: @urgent;
+}
+
+#cpu,
+#memory {
+    color: @highlight;
+}
+
+/* Volume slider */
+#pulseaudio-slider slider {
+    all: unset;
+    min-height: 0;
+    min-width: 0;
+    opacity: 0;
+}
+
+#pulseaudio-slider trough {
+    min-height: 4px;
+    min-width: 65px;
+    border-radius: 99px;
+    background: #454955;
+}
+
+#pulseaudio-slider highlight {
+    min-width: 4px;
+    border-radius: 99px;
+    background: @highlight;
+}
+
+/* Tray */
+#tray menu {
+    background: @background;
+    color: @foreground;
+    border-radius: 8px;
+}
+
+/* Tooltips */
+tooltip {
+    background: @background;
+    color: @foreground;
+    border-radius: 8px;
+    padding: 3px;
+}
